@@ -72,7 +72,6 @@ income_median = st.number_input("Median Income (RM)", min_value=3000.0)
 # Build input dataframe
 # -----------------------------
 input_data = pd.DataFrame([{
-    "year": year,
     "cases": cases,
     "incidence": incidence,
     "rape": rape,
