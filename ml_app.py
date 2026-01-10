@@ -61,7 +61,6 @@ state = st.selectbox(
     ]
 )
 
-year = st.slider("Year", 2018, 2022, 2022)
 cases = st.number_input("Previous STD Cases", min_value=0)
 incidence = st.number_input("Incidence Rate", min_value=0.0)
 rape = st.number_input("Reported Rape Cases", min_value=0)
@@ -123,7 +122,6 @@ if st.button("Assess STD Risk"):
     # Display results
     st.subheader("Risk Assessment Result")
     st.success(f"**Predicted Risk Level:** {risk_map[prediction]}")
-    st.info(f"Model Confidence: {confidence:.2%}")
 
     st.markdown(f"**Model Used:** `{model_choice}`")
 
