@@ -66,8 +66,8 @@ cases = st.number_input("Previous STD Cases", min_value=0)
 incidence = st.number_input("Incidence Rate", min_value=0.0)
 rape = st.number_input("Reported Rape Cases", min_value=0)
 students = st.number_input("Post-secondary Student Enrolment", min_value=0)
-income_mean = st.number_input("Mean Income (RM)", min_value=0.0)
-income_median = st.number_input("Median Income (RM)", min_value=0.0)
+income_mean = st.number_input("Mean Income (RM)", min_value=1500.0)
+income_median = st.number_input("Median Income (RM)", min_value=3000.0)
 
 # -----------------------------
 # Build input dataframe
@@ -118,7 +118,7 @@ if st.button("Assess STD Risk"):
     confidence = probabilities[prediction]
 
     # Map risk levels
-    risk_map = {0: "🟢 Low Risk", 1: "🟡 Moderate Risk", 2: "🔴 High Risk"}
+    risk_map = {0: " Low Risk", 1: " Moderate Risk", 2: " High Risk"}
 
     # Display results
     st.subheader("Risk Assessment Result")
@@ -130,7 +130,7 @@ if st.button("Assess STD Risk"):
     # -----------------------------
     # Display evaluation metrics
     # -----------------------------
-    st.subheader("📈 Model Evaluation Metrics (Test Set)")
+    st.subheader(" Model Evaluation Metrics (Test Set)")
 
     metrics = model_metrics[model_choice]
 
@@ -144,8 +144,8 @@ if st.button("Assess STD Risk"):
 
     st.markdown("""
     **Interpretation**
-    - 🟢 Low Risk: Below-average STD incidence
-    - 🟡 Moderate Risk: Requires monitoring
-    - 🔴 High Risk: Priority for intervention and planning
+    -  Low Risk: Below-average STD incidence
+    -  Moderate Risk: Requires monitoring
+    -  High Risk: Priority for intervention and planning
     """)
 
